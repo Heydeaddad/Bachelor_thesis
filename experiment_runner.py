@@ -11,6 +11,7 @@ from train_baseline import train_baseline
 from train_adversarial import train_adversarial
 from metrics import fairness_metrics, dataset_demographic_parity, efficiency_metrics
 from plot_utils import plot_fairness, plot_efficiency, plot_weights
+from plot_utils import plot_fairness_correlation_kendall_theilsen
 
 def main():
     set_seed()
@@ -69,6 +70,7 @@ def main():
     plot_fairness(res_base, res_adv, RESULTS_DIR)
     plot_efficiency(res_base, eff_base_df, res_adv, eff_adv_df, RESULTS_DIR)
     plot_weights(weights_baseline, weights_adv, corr, corr_p, t_p, RESULTS_DIR)
+    plot_fairness_correlation_kendall_theilsen(res_base, RESULTS_DIR)
     print(f"Saved all experiment results and plots to {RESULTS_DIR}")
 
 if __name__ == "__main__":
