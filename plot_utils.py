@@ -5,7 +5,7 @@ from scipy.stats import pearsonr, kendalltau
 from sklearn.linear_model import TheilSenRegressor
 from sklearn.utils import resample
 
-# ---- OLD PLOTS ----
+
 
 def plot_fairness(res_base, res_adv, results_dir):
     metric_names = [("model_dp", "Demographic Parity"), ("model_eo", "Equal Opportunity"), ("model_eod", "Equalized Odds")]
@@ -66,7 +66,7 @@ def plot_weights(weights_baseline, weights_adv, corr, corr_p, t_p, results_dir):
     plt.savefig(os.path.join(results_dir, "main_model_weights_bias0.png"))
     plt.close()
 
-# ---- NEW PLOT: Fairness correlation with Kendall's τ and Theil–Sen regression ----
+
 
 def plot_fairness_correlation_kendall_theilsen(res_base, results_dir):
     """
