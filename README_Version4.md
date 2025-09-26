@@ -53,6 +53,7 @@ pip install numpy pandas scikit-learn matplotlib torch
      - `adversarial_fairness_comparison.png`
      - `adversarial_efficiency_comparison.png`
      - `main_model_weights_bias0.png`
+     - `fairness_correlation_kendall_theilsen.png`
      - CSV files with raw metric values
 
 4. **Customize/Extend:**
